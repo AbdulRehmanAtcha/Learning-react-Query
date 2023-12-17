@@ -1,17 +1,33 @@
-// import logo from './logo.svg';
-// import './App.css';
-import { Route, Routes } from "react-router-dom"
-import Products from "./Products";
-import Product from "./Product";
-import Home from "./Home";
+import './App.css';
+import { Link, Route, Routes } from 'react-router-dom';
+import Users from './Users';
+import Home from './Home';
+import Add from './Add';
 
 function App() {
   return (
-    <div className="App">
+    <div>
+      <ul>
+        <li>
+          <Link to={"/"}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to={"/all"}>
+            All Users
+          </Link>
+        </li>
+        <li>
+          <Link to={"/add"}>
+            Add User
+          </Link>
+        </li>
+      </ul>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/products/:productId" element={<Product />} />
+        <Route path='/' element={<Home/>}/>
+        <Route path='/all' element={<Users/>}/>
+        <Route path='/add' element={<Add/>}/>
       </Routes>
     </div>
   );

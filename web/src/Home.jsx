@@ -1,10 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div>
-    <Link to={"/products"}>Products</Link></div>
+    <div>Welcome To Userpedia</div>
   )
 }
 
